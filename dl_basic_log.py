@@ -33,8 +33,6 @@ if __name__ == "__main__":
     mlflow.start_run()
     # mlflow.set_tag('mlflow.source.type', 'PROJECT')
     # mlflow.set_tag('mlflow.source.name', 'https://github.com/UdiBhaskar/mlflow-basic-tracking/blob/exp-0/dl_basic_log.py')
-    # mlflow.set_tag("mlflow.source.git.repoURL", "https://github.com/UdiBhaskar/mlflow-basic-tracking.git")
-    # mlflow.set_tag('mlflow.source.git.branch', 'exp-0')
     # mlflow.set_tag("mlflow.user", 'Uday')
     logging_params = dict()
     logging_params['model'] = 'roberta-base'
@@ -75,4 +73,6 @@ if __name__ == "__main__":
     mlflow.pytorch.log_state_dict(state_dict, artifact_path="checkpoint")
     mlflow.log_artifact('/home/intellect/Uday/mlflow_test/test_scripts/log_details/dl_basic_log.py', 'code')
     mlflow.set_tag('version', '2')
+    mlflow.set_tag("source.git.repoURL", "https://github.com/UdiBhaskar/mlflow-basic-tracking.git")
+    mlflow.set_tag('source.git.branch', 'exp-0')
     mlflow.end_run()
