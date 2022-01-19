@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
     random_f1 = np.random.rand(110)
     random_f1.sort()
-    f1_socres = random_f1[random_f1<0.95][-20:]
-    loss_vals = random_f1[random_f1<0.3][-20:][::-1]
+    f1_socres = random_f1[random_f1<0.7][-20:]
+    loss_vals = random_f1[random_f1<0.5][-20:][::-1]
 
     for i in range(logging_params['epochs']):
         logging_metrics_epoch = dict()
