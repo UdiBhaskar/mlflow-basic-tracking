@@ -33,7 +33,7 @@ if __name__ == "__main__":
     mlflow.start_run()
     # mlflow.set_tag('mlflow.source.type', 'PROJECT')
     # mlflow.set_tag('mlflow.source.name', 'https://github.com/UdiBhaskar/mlflow-basic-tracking/blob/exp-0/dl_basic_log.py')
-    # mlflow.set_tag("mlflow.user", 'Uday')
+    mlflow.set_tag("mlflow.user", 'Uday')
     logging_params = dict()
     logging_params['model'] = 'roberta-base'
     logging_params['learning_rate'] = 2.5e-5
