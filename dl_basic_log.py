@@ -38,9 +38,9 @@ if __name__ == "__main__":
     logging_params['model'] = 'roberta-base'
     logging_params['learning_rate'] = 2.5e-5
     logging_params['epochs'] = 20
-    logging_params['batch_size'] = 16
+    logging_params['batch_size'] = 32
     logging_params['seed_val'] = 24
-    logging_params['optimizer'] = 'adam'
+    logging_params['optimizer'] = 'sgd'
     mlflow.log_params(logging_params)
 
     model = AutoModel.from_pretrained('roberta-base')
