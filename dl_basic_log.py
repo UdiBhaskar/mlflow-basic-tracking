@@ -38,8 +38,6 @@ if __name__ == "__main__":
     logging_params['batch_size'] = 16
     logging_params['seed_val'] = 24
     logging_params['optimizer'] = 'adam'
-    # mlflow.set_tag('mlflow.source.git.repoURL', 'https://github.com/UdiBhaskar/mlflow-basic-tracking.git')
-    # mlflow.set_tag('mlflow.source.git.branch', 'main')
     mlflow.log_params(logging_params)
 
     model = AutoModel.from_pretrained('roberta-base')
@@ -71,4 +69,7 @@ if __name__ == "__main__":
             }
     mlflow.pytorch.log_state_dict(state_dict, artifact_path="checkpoint")
     mlflow.log_artifact('/home/intellect/Uday/mlflow_test/test_scripts/log_details/dl_basic_log.py', 'code')
+    mlflow.set_tag('mlflow.source.git.repoURL', 'https://github.com/UdiBhaskar/mlflow-basic-tracking.git')
+    # mlflow.set_tag('mlflow.source.git.branch', 'main')
+    mlflow.set_tag('version', '2')
     mlflow.end_run()
