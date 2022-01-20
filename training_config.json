@@ -1,0 +1,8 @@
+{
+    "model": "roberta-base",
+    "learning_rate": 2.5e-05,
+    "epochs": 20,
+    "batch_size": 32,
+    "seed_val": 24,
+    "optimizer": "Adam"
+}
