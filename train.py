@@ -21,7 +21,7 @@ with open("mlflow_project.yml", 'r') as stream:
     project_config = yaml.safe_load(stream)
 
 ## set the experiement name. If experiment not exist, it creates new experiment.
-mlflow.set_experiment('basic_dl')
+mlflow.set_experiment('New_exp-1')
 
 
 if __name__ == "__main__":
