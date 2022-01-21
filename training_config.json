@@ -1,0 +1,8 @@
+{
+    "model": "roberta-large",
+    "learning_rate": 3.5e-05,
+    "epochs": 20,
+    "batch_size": 32,
+    "seed_val": 24,
+    "optimizer": "SGD"
+}
